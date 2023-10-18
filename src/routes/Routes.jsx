@@ -8,6 +8,8 @@ import Home from "../pages/Home/Home";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import PrivateRoute from "./PrivateRoute";
 import Amazon from "../details/Amozon/Amazon";
+import ProductDetail from "../details/ProductDetail";
+import MyCart from "../pages/Mycart/MyCart";
   
   const router = createBrowserRouter([
     {
@@ -25,7 +27,18 @@ import Amazon from "../details/Amozon/Amazon";
         },
         {
           path: '/amazon',
-          element: <Amazon></Amazon>
+          element: <Amazon></Amazon>,
+          loader: () => fetch('http://localhost:5000/products')
+        },
+        {
+          path: '/details/:id',
+          element: <ProductDetail></ProductDetail>,
+          loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        },
+        {
+          path: '/myCart',
+          element: <MyCart></MyCart>,
+          loader: () => fetch('http://localhost:5000/myCart')
         },
         {
             path: '/register',

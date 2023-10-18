@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { GrGoogle } from "react-icons/gr";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../providers/AuthProvider";
+import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {

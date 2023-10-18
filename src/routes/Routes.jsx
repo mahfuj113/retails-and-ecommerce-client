@@ -5,6 +5,9 @@ import Root from "../layouts/Root";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import Home from "../pages/Home/Home";
+import AddProduct from "../pages/AddProduct/AddProduct";
+import PrivateRoute from "./PrivateRoute";
+import Amazon from "../details/Amozon/Amazon";
   
   const router = createBrowserRouter([
     {
@@ -15,6 +18,14 @@ import Home from "../pages/Home/Home";
             path: '/',
             element: <Home></Home>,
             loader: () => fetch("http://localhost:5000/create-category")
+        },
+        {
+          path: '/addProduct',
+          element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+        },
+        {
+          path: '/amazon',
+          element: <Amazon></Amazon>
         },
         {
             path: '/register',

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { GrGoogle } from "react-icons/gr";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const Login = () => {
     const {signIn,googleLogin} = useContext(AuthContext)
@@ -18,15 +18,11 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user);
-                Swal.fire(
-                    'You successfully login',
-                    '',
-                    'success'
-                )
+                toast.success('You successfully login')
                 navigate(location.state ? location.state : '/')
             })
             .catch(error => {
-                Swal.fire(error.message);
+                toast.error(error.message);
             })
     }
     const handleGoogleLogin = () => {

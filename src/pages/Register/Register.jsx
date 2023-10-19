@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GrGoogle } from 'react-icons/gr'
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const Register = () => {
     const { createUser, handleUpdateProfile,googleLogin } = useContext(AuthContext)
@@ -17,23 +17,31 @@ const Register = () => {
         const img = form.get('photo')
         const email = form.get('email')
         const password = form.get('password')
-        console.log(name, img, email, password);
+
+        if (password.length < 6) {
+            toast.error('Password must be at least 6 characters');
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            toast.error("Password need a capital letter")
+            return;
+        }
+        else if (!/[\W]/.test(password)) {
+            toast.error("Password need a special character")
+            return;
+        }
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
                 handleUpdateProfile(name, img)
                     .then(() => {
-                        Swal.fire(
-                            'User created successfully',
-                            '',
-                            'success'
-                        )
+                        toast.success('User Created successfully');
                         navigate('/')
                         window.location.reload()
                     })
             })
             .catch(error => {
-                Swal.fire(error.message)
+                toast.error(error.message);
             })
 
     }

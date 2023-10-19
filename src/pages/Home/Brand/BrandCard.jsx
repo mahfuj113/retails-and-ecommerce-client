@@ -5,8 +5,8 @@ const BrandCard = ({ brand }) => {
     console.log(brand);
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
-            <Link to={`/${name.toLowerCase()}`}>
-                <figure><img src={img} alt="Shoes" /></figure>
+            <Link to={`/brand/${name.toLowerCase()}`}>
+                <figure><img className='h-[290px] w-full' src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                 </div>

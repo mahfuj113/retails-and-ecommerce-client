@@ -7,9 +7,10 @@ import Login from "../pages/Login/Login";
 import Home from "../pages/Home/Home";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import PrivateRoute from "./PrivateRoute";
-import Amazon from "../details/Amozon/Amazon";
 import ProductDetail from "../details/ProductDetail";
 import MyCart from "../pages/Mycart/MyCart";
+import Update from "../Update/Update";
+import Apple from "../details/Amozon/Apple";
   
   const router = createBrowserRouter([
     {
@@ -26,14 +27,19 @@ import MyCart from "../pages/Mycart/MyCart";
           element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
         },
         {
-          path: '/amazon',
-          element: <Amazon></Amazon>,
-          loader: () => fetch('http://localhost:5000/products')
+          path: '/brand/:name',
+          element: <Apple></Apple>,
+          loader: ({params}) => fetch(`http://localhost:5000/products/${params.name}`)
         },
         {
           path: '/details/:id',
           element: <ProductDetail></ProductDetail>,
-          loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+        },
+        {
+          path: "/update/:id",
+          element: <Update></Update>,
+          loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
         },
         {
           path: '/myCart',

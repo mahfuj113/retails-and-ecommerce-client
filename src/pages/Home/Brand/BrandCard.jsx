@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 const BrandCard = ({ brand }) => {
     const { name, img } = brand;
-    console.log(brand);
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
             <Link to={`/brand/${name.toLowerCase()}`}>

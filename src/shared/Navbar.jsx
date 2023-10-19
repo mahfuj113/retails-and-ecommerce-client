@@ -28,10 +28,9 @@ const Navbar = () => {
         <li><NavLink to='/addProduct'>Add Product</NavLink></li>
         <li><NavLink to='/myCart'>My Cart</NavLink></li>
         <li><NavLink to='/login'>Login</NavLink></li>
-        {/* <li><NavLink to='/register'>Register</NavLink></li> */}
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 lg:px-10 py-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,7 +41,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <img src="https://i.ibb.co/TDfn4G8/rsz-logo-e-commerce.png" alt="" />
-                <p className="text-xl lg:ml-6">Retail & E-commerce</p>
+                <p className="text-2xl font-bold lg:ml-6">Friends Mart</p>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

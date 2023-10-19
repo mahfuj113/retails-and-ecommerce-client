@@ -4,7 +4,7 @@ import { Toaster } from 'react-hot-toast';
 
 const Root = () => {
     return (
-        <div className='lg:p-10'>
+        <div>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Toaster></Toaster>

@@ -16,7 +16,7 @@ const Update = () => {
         const photo = form.get('photo')
         const productUpdate = { name, brandName, type, price, rating, details, photo }
         console.log(productUpdate);
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`http://localhost:5000/product/${_id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(productUpdate)
@@ -27,7 +27,7 @@ const Update = () => {
             })
     }
     return (
-        <div className="bg-[#F4F3F0] p-5 lg:p-28">
+        <div className="bg-[#c2a347] p-5 lg:p-28">
             <h2 className="text-3xl font-bold text-center">Update Product</h2>
             <form onSubmit={handleUpdateProduct}>
                 {/* form row */}
@@ -53,9 +53,6 @@ const Update = () => {
                             <option value='lg'>LG</option>
                             <option value='samsung'>Samsung</option>
                         </select>
-                        {/* <label className="input-group">
-                            <input type="text" defaultValue={brandName} name="brandName" placeholder="Brand Name" className="input input-bordered w-full" />
-                        </label> */}
                     </div>
                 </div>
                 <div className="md:flex gap-4 mb-8">

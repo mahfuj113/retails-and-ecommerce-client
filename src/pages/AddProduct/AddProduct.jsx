@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
 
     const handleAddProduct = e => {
@@ -20,10 +22,18 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if(data.insertedId){
+                    e.target.reset()
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Successfully',
+                        text: 'Product added',
+                      })
+                }
             })
     }
     return (
-        <div className="bg-[#F4F3F0] p-5 lg:p-28">
+        <div className="bg-[#c2a347] p-5 lg:p-28">
             <h2 className="text-3xl font-bold text-center">Add Product</h2>
             <form onSubmit={handleAddProduct}>
                 {/* form row */}
@@ -33,7 +43,7 @@ const AddProduct = () => {
                             <span className="label-text">Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" placeholder="Your name" className="input input-bordered w-full" />
+                            <input type="text" name="name" required placeholder="Your name" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2">
@@ -65,7 +75,7 @@ const AddProduct = () => {
                             <span className="label-text">Price</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" />
+                            <input type="text" name="price" required placeholder="Price" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>

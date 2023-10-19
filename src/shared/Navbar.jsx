@@ -72,7 +72,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                     ) : (
-                        <Link to='/login'><button className="btn" onClick={handleSignOut}>Login</button></Link>
+                        <Link to='/login'><button className="btn btn-secondary" onClick={handleSignOut}>Login</button></Link>
                     )
                 }
             </div>

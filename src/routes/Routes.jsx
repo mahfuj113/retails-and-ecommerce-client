@@ -35,17 +35,17 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
         },
         {
           path: '/details/:id',
-          element: <ProductDetail></ProductDetail>,
+          element: <PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
         },
         {
           path: "/update/:id",
-          element: <Update></Update>,
+          element: <PrivateRoute><Update></Update></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
         },
         {
           path: '/myCart',
-          element: <MyCart></MyCart>,
+          element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
           loader: () => fetch('http://localhost:5000/myCart')
         },
         {

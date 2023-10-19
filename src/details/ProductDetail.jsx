@@ -19,7 +19,7 @@ const ProductDetail = () => {
                 if (data.insertedId) {
                     Swal.fire(
                         'successfully',
-                        'Product Added',
+                        'Product added in your cart',
                         'success'
                     )
                 }
@@ -37,7 +37,7 @@ const ProductDetail = () => {
                 <p>Type: {type}</p>
                 <p>{details}</p>
                 <div className="card-actions ">
-                    <button onClick={handleAddCart} className="btn text-black bg-[#4d9ec6] hover:bg-[#d3aa31]">Add Cart</button>
+                    <button onClick={handleAddCart} className="btn text-black bg-[#25dfecee] hover:bg-[#25dfecee]">Add Cart</button>
                 </div>
             </div>
         </div>

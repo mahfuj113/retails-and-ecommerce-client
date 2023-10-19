@@ -33,7 +33,7 @@ const AddProduct = () => {
             })
     }
     return (
-        <div className="bg-[#c2a347] p-5 lg:p-28">
+        <div className="bg-[#25dfecee] p-5 lg:p-28">
             <h2 className="text-3xl font-bold text-center">Add Product</h2>
             <form onSubmit={handleAddProduct}>
                 {/* form row */}
@@ -107,7 +107,7 @@ const AddProduct = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Product" className="btn btn-info w-full" />
+                <input type="submit" value="Add Product" className="btn btn-secondary w-full" />
             </form>
         </div>
     );

@@ -25,7 +25,7 @@ const Update = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.modifiedCount){
+                if(data.modifiedCount > 0){
                     Swal.fire({
                         icon: 'success',
                         title: 'Successfully',
@@ -35,7 +35,7 @@ const Update = () => {
             })
     }
     return (
-        <div className="bg-[#c2a347] p-5 lg:p-28">
+        <div className="bg-[#25dfecee] p-5 lg:p-28">
             <h2 className="text-3xl font-bold text-center">Update Product</h2>
             <form onSubmit={handleUpdateProduct}>
                 {/* form row */}
@@ -109,7 +109,7 @@ const Update = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Update Product" className="btn btn-info w-full" />
+                <input type="submit" value="Update Product" className="btn btn-secondary w-full" />
             </form>
         </div>
     );

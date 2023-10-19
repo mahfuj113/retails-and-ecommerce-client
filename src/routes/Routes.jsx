@@ -11,11 +11,13 @@ import ProductDetail from "../details/ProductDetail";
 import MyCart from "../pages/Mycart/MyCart";
 import Update from "../Update/Update";
 import Apple from "../details/Amozon/Apple";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
   
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',

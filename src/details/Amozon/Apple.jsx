@@ -1,13 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import AppleCard from "./AppleCard";
 import { useState } from "react";
+import BrandSlider from "./BrandSlider";
 
 const Apple = () => {
     const products = useLoaderData()
     const [productItem, setProduct] = useState(products)
     return (
         <div>
-            <div >
+            <BrandSlider></BrandSlider>
+            <div className="mt-12 mb-12">
                 {
                     productItem.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 p-3 lg:p-0">

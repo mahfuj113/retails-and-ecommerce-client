@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 import { FiDollarSign } from 'react-icons/fi'
 import Swal from 'sweetalert2';
+import Ratings from '../../shared/Ratings';
 
 const AppleCard = ({ product, productItem, setProduct }) => {
     const { _id, name, photo, brandName, details, price, rating, type, } = product
@@ -51,7 +52,7 @@ const AppleCard = ({ product, productItem, setProduct }) => {
                     </div>
                     <div className='flex-1 justify-center'>
                         <p>Brand: <span className='uppercase'>{brandName}</span></p>
-                        <p>Rating: {rating}</p>
+                        <Ratings rating={rating}/>
                         <p>Type: {type}</p>
                     </div>
                 </div>

@@ -40,7 +40,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <img src="https://i.ibb.co/TDfn4G8/rsz-logo-e-commerce.png" alt="" />
+                <img className="h-12 mr-3 lg:mr-0" src="https://i.ibb.co/nPZ06kM/logo-e-commerce.png" alt="" />
                 <p className="text-2xl font-bold lg:ml-6">Friends Mart</p>
             </div>
             <div className="navbar-center hidden lg:flex">

@@ -1,6 +1,7 @@
 import { FiDollarSign } from "react-icons/fi";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Ratings from "../shared/Ratings";
 
 const ProductDetail = () => {
     const productItem = useLoaderData()
@@ -28,12 +29,11 @@ const ProductDetail = () => {
         <div className="lg:flex items-center p-4 lg:p-0">
             {/* <div className="card lg:card-side"> */}
             <figure className="flex-1 justify-center items-center"><img src={photo} alt="Album" /></figure>
-            {/* <figure className="flex-1 justify-center items-center"><img className="w-[400px] h-[600px]" src={photo} alt="Album" /></figure> */}
             <div className="md:m-10 flex-1 space-y-3">
                 <h2 className="text-xl lg:text-3xl font-bold">{name}</h2>
                 <p className='flex items-center text-xl lg:text-3xl font-bold'>Price: {price}<FiDollarSign></FiDollarSign></p>
                 <p>Brand: {brandName}</p>
-                <p>Rating: {rating}</p>
+                <Ratings rating={rating}/>
                 <p>Type: {type}</p>
                 <p>{details}</p>
                 <div className="card-actions ">

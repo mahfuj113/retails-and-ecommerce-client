@@ -24,10 +24,9 @@ const Navbar = () => {
             .catch()
     }
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
+        <li ><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/addProduct'>Add Product</NavLink></li>
         <li><NavLink to='/myCart'>My Cart</NavLink></li>
-        <li><NavLink to='/login'>Login</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100 lg:px-10 py-10">
@@ -44,12 +43,12 @@ const Navbar = () => {
                 <p className="text-2xl font-bold lg:ml-6">Friends Mart</p>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 gap-2 text-lg">
                     {links}
                 </ul>
             </div>
             <div className="navbar-end">
-                <label className="swap swap-rotate">
+                <label className="swap swap-rotate mr-2">
                     <input 
                     type="checkbox" 
                     onChange={handleToggle}
@@ -73,7 +72,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                     ) : (
-                        <Link to='/login'><button onClick={handleSignOut}>Login</button></Link>
+                        <Link to='/login'><button className="btn" onClick={handleSignOut}>Login</button></Link>
                     )
                 }
             </div>

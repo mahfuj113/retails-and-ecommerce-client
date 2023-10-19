@@ -46,7 +46,7 @@ const Review = () => {
                                 Satisfied <br /> Customer
                             </p>
                         </div>
-                        <div className="py-5 grow max-w-4xl mt-5 lg:mt-0">
+                        <div className="py-5 px-5 lg:px-0 grow max-w-4xl mt-5 lg:mt-0">
                             <Swiper
                                 // install Swiper modules
                                 className="reviewSwiper"

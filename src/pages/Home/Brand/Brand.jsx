@@ -4,17 +4,14 @@ import BrandCard from "./BrandCard";
 
 const Brand = () => {
     const brands = useLoaderData()
-    // const name = "Best Buy";
+    console.log(brands);
+    // const name = "Apple";
     // const img = "https://i.ibb.co/QXGjhD5/Education.png"
-    // const walmart = "walmart"
-    // const walmartImg = "https://i.ibb.co/QXGjhD5/Education.png"
-    // const alibaba = ""
     // const category = {
     //     name, img
     // }
-    // console.log(category);
     // useEffect(() => {
-    //     fetch("https://retail-and-e-commerce-server-5vu7yn91a-mahfuj113.vercel.app/create-category", {
+    //     fetch("https://retail-and-e-commerce-server-five.vercel.app/create-category", {
     //         method: "POST",
     //         headers: {"Content-type": "application/json"},
     //         body: JSON.stringify(category)
@@ -29,7 +26,7 @@ const Brand = () => {
             <h1 className="text-4xl font-bold text-center my-10">Our Brands</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
-                    brands.map(brand => <BrandCard key={brand._id} brand={brand}></BrandCard>)
+                    brands?.map(brand => <BrandCard key={brand._id} brand={brand}></BrandCard>)
                 }
             </div>
         </div>

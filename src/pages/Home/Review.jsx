@@ -15,13 +15,13 @@ const Review = () => {
             photoURL: "https://i.ibb.co/nPZ06kM/logo-e-commerce.png",
         },
         {
-            rating: "4.5",
+            rating: "4",
             comment: "Game-changing innovation! This tech product has simplified my daily tasks and offers incredible value for the price.",
             email: "user2@gmail.com",
             name: "Anna",
             photoURL: "https://i.ibb.co/nPZ06kM/logo-e-commerce.png",
         },
-        {
+        {   
             rating: "5",
             comment: "A must-have for tech enthusiasts! Outstanding performance, user-friendly interface, and it looks great on my desk.",
             email: "user3@gmail.com",

@@ -17,7 +17,7 @@ const Update = () => {
         const photo = form.get('photo')
         const productUpdate = { name, brandName, type, price, rating, details, photo }
         console.log(productUpdate);
-        fetch(`https://retail-and-e-commerce-server-5vu7yn91a-mahfuj113.vercel.app/product/${_id}`, {
+        fetch(`https://retail-and-e-commerce-server-five.vercel.app/product/${_id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(productUpdate)

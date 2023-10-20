@@ -19,6 +19,6 @@ const Ratings = ({ rating }) => {
     );
 };
 Ratings.propTypes = {
-    rating: PropTypes
+    rating: PropTypes.any
 }
 export default Ratings;

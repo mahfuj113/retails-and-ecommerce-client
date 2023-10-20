@@ -14,7 +14,7 @@ const AddProduct = () => {
         const photo = form.get('photo')
         const product = { name, brandName, type, price, rating, details, photo }
         console.log(product);
-        fetch('http://localhost:5000/product', {
+        fetch('https://retail-and-e-commerce-server-5vu7yn91a-mahfuj113.vercel.app/product', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(product)

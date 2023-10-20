@@ -14,7 +14,7 @@ const Brand = () => {
     // }
     // console.log(category);
     // useEffect(() => {
-    //     fetch("http://localhost:5000/create-category", {
+    //     fetch("https://retail-and-e-commerce-server-5vu7yn91a-mahfuj113.vercel.app/create-category", {
     //         method: "POST",
     //         headers: {"Content-type": "application/json"},
     //         body: JSON.stringify(category)

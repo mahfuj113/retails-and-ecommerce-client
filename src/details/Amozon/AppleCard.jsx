@@ -18,7 +18,7 @@ const AppleCard = ({ product, productItem, setProduct }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/product/${id}`, {
+                fetch(`https://retail-and-e-commerce-server-5vu7yn91a-mahfuj113.vercel.app/product/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
